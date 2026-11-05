@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秘密官网-秘密官网入口与秘密官网导航_秘密官网首页</title>
+<meta name="description" content="秘密官网首页，提供秘密官网入口、秘密官网导航与秘密官网使用说明，帮助访问者快速了解秘密官网的栏目结构、访问方式与常见问题。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1f3b'/%3E%3Cpath d='M32 14c9 0 16 7 16 16 0 11-9 18-16 22-7-4-16-11-16-22 0-9 7-16 16-16z' fill='%23f3c26b'/%3E%3Ccircle cx='32' cy='30' r='6' fill='%231b1f3b'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b1f3b;
+  --ink-soft:#3a3f5c;
+  --muted:#6b7086;
+  --gold:#c8963e;
+  --gold-soft:#f3e3c4;
+  --paper:#faf7f1;
+  --card:#ffffff;
+  --line:#e6e0d4;
+  --radius:14px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink-soft);
+  font-family:"Songti SC","SimSun","Noto Serif SC",Georgia,serif;
+  font-size:16px;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.brand-text,.nav a,.btn{
+  font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+a{color:var(--ink);text-decoration:none;}
+a:hover{color:var(--gold);}
+.wrap{width:min(1120px,92vw);margin:0 auto;}
+
+/* Header */
+header.site{
+  background:rgba(250,247,241,.94);
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(8px);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:14px 0;
+}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo svg{width:38px;height:38px;flex:none;}
+.brand-text{
+  font-size:19px;font-weight:700;color:var(--ink);letter-spacing:.5px;
+  white-space:nowrap;
+}
+.nav{display:flex;gap:26px;font-size:15px;}
+.nav a{color:var(--ink-soft);padding:4px 0;border-bottom:2px solid transparent;}
+.nav a:hover{border-bottom-color:var(--gold);color:var(--ink);}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;color:var(--ink);font-size:14px;}
+
+/* Hero */
+.hero{
+  padding:64px 0 54px;
+  background:
+    radial-gradient(680px 320px at 88% 8%,rgba(200,150,62,.16),transparent 70%),
+    radial-gradient(520px 300px at 4% 90%,rgba(27,31,59,.07),transparent 70%);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;}
+.eyebrow{
+  display:inline-block;font-size:13px;letter-spacing:2px;color:var(--gold);
+  border:1px solid var(--gold-soft);background:#fff;border-radius:999px;
+  padding:3px 14px;margin-bottom:18px;
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+}
+h1{
+  font-size:clamp(30px,4.4vw,46px);
+  line-height:1.3;margin:0 0 18px;color:var(--ink);font-weight:800;
+  letter-spacing:1px;
+}
+.hero p.lead{
+  font-size:17px;color:var(--ink-soft);margin:0 0 28px;max-width:34em;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:10px;font-size:15px;font-weight:600;
+  border:1px solid transparent;transition:.2s;cursor:pointer;
+}
+.btn-main{background:var(--ink);color:#fff;}
+.btn-main:hover{background:#2b3055;color:#fff;}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--gold);color:var(--ink);}
+.btn[aria-disabled="true"]{opacity:.72;}
+
+.hero-art{display:flex;justify-content:center;}
+.hero-art svg{width:100%;max-width:300px;height:auto;}
+
+/* Section base */
+section{padding:56px 0;}
+section + section{border-top:1px solid var(--line);}
+.sec-head{margin-bottom:30px;max-width:44em;}
+.sec-head h2{
+  font-size:clamp(22px,2.6vw,28px);margin:0 0 10px;color:var(--ink);font-weight:700;letter-spacing:.5px;
+}
+.sec-head p{margin:0;color:var(--muted);font-size:15.5px;}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;transition:.2s;
+}
+.card:hover{border-color:var(--gold-soft);box-shadow:0 10px 26px rgba(27,31,59,.06);transform:translateY(-2px);}
+.card .ico{width:38px;height:38px;margin-bottom:14px;display:block;}
+.card h3{font-size:17.5px;margin:0 0 8px;color:var(--ink);font-weight:700;}
+.card p{margin:0;font-size:15px;color:var(--muted);line-height:1.8;}
+
+/* Entry list */
+.entry-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.entry{
+  display:flex;gap:16px;align-items:flex-start;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;
+}
+.entry .num{
+  flex:none;width:34px;height:34px;border-radius:50%;
+  background:var(--gold-soft);color:#8a6318;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:700;
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+}
+.entry h3{margin:0 0 6px;font-size:16.5px;color:var(--ink);}
+.entry p{margin:0;font-size:14.8px;color:var(--muted);}
+
+/* Guide */
+.guide{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start;}
+.guide-body p{margin:0 0 16px;font-size:15.8px;}
+.guide-body p:last-child{margin-bottom:0;}
+.panel{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 26px 22px;
+}
+.panel h3{margin:0 0 14px;font-size:16.5px;color:var(--ink);}
+.panel ul{margin:0;padding-left:20px;}
+.panel li{font-size:15px;color:var(--muted);margin-bottom:10px;}
+.panel li:last-child{margin-bottom:0;}
+.panel li strong{color:var(--ink-soft);font-weight:600;}
+
+/* FAQ */
+.faq{display:grid;gap:14px;}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:18px 22px;
+}
+details summary{
+  cursor:pointer;font-size:16px;color:var(--ink);font-weight:600;
+  list-style:none;position:relative;padding-right:26px;
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+}
+details summary::-webkit-details-marker{display:none;}
+details summary::after{
+  content:"+";position:absolute;right:0;top:-2px;font-size:20px;color:var(--gold);font-weight:400;
+}
+details[open] summary::after{content:"–";}
+details p{margin:12px 0 0;font-size:15px;color:var(--muted);}
+
+/* Footer */
+footer.site{
+  border-top:1px solid var(--line);background:#fff;
+  padding:40px 0 34px;margin-top:0;
+}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;}
+.footer-brand .brand-text{display:block;margin-bottom:10px;}
+.footer-brand p{margin:0;font-size:14px;color:var(--muted);max-width:26em;}
+footer h4{font-size:14px;color:var(--ink);margin:0 0 12px;letter-spacing:1px;font-weight:700;}
+footer ul{list-style:none;margin:0;padding:0;}
+footer li{margin-bottom:9px;}
+footer li a{font-size:14px;color:var(--muted);}
+footer li a:hover{color:var(--gold);}
+.copy{
+  margin-top:30px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:13px;color:var(--muted);text-align:center;
+}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:32px;}
+  .hero-art{order:-1;max-width:200px;margin:0 auto;}
+  .cards{grid-template-columns:1fr;}
+  .entry-grid{grid-template-columns:1fr;}
+  .guide{grid-template-columns:1fr;gap:26px;}
+  .footer-grid{grid-template-columns:1fr;gap:26px;}
+  .nav{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);
+    padding:8px 4vw 14px;
+  }
+  .nav.open{display:flex;}
+  .nav a{padding:11px 0;border-bottom:1px solid var(--paper);font-size:15.5px;}
+  .nav-toggle{display:block;}
+  .header-inner{position:relative;flex-wrap:wrap;}
+  .hero{padding:42px 0 40px;}
+  section{padding:42px 0;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="秘密官网首页">
+      <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1b1f3b"/>
+        <path d="M32 14c9 0 16 7 16 16 0 11-9 18-16 22-7-4-16-11-16-22 0-9 7-16 16-16z" fill="#f3c26b"/>
+        <circle cx="32" cy="30" r="6" fill="#1b1f3b"/>
+      </svg>
+      <span class="brand-text">秘密官网</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mainnav">导航</button>
+    <nav class="nav" id="mainnav" aria-label="主导航">
+      <a href="#entry">访问入口</a>
+      <a href="#channels">栏目结构</a>
+      <a href="#guide">使用说明</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">首页 · 入口与说明</span>
+        <h1>秘密官网</h1>
+        <p class="lead">这里是秘密官网的首页，集中说明秘密官网的入口方式、栏目结构与使用要点。无论你是第一次到访，还是需要重新确认访问路径，都可以从本页开始，按顺序找到对应内容。</p>
+        <div class="hero-actions">
+          <a class="btn btn-main" href="#entry">查看访问入口</a>
+          <a class="btn btn-ghost" href="#guide">阅读使用说明</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 300 300" role="img">
+          <circle cx="150" cy="150" r="132" fill="none" stroke="#e6e0d4" stroke-width="1.5"/>
+          <circle cx="150" cy="150" r="104" fill="none" stroke="#f3e3c4" stroke-width="1.5" stroke-dasharray="4 6"/>
+          <path d="M150 62c34 0 60 26 60 60 0 41-34 68-60 84-26-16-60-43-60-84 0-34 26-60 60-60z" fill="#1b1f3b"/>
+          <circle cx="150" cy="122" r="20" fill="#f3c26b"/>
+          <circle cx="150" cy="122" r="8" fill="#1b1f3b"/>
+          <rect x="143" y="140" width="14" height="26" rx="4" fill="#f3c26b"/>
+          <circle cx="150" cy="178" r="5" fill="#f3c26b"/>
+          <path d="M96 216h108" stroke="#c8963e" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="entry">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>访问入口与到达方式</h2>
+        <p>秘密官网的访问路径以稳定、可核对为原则。以下四条是常见的到达方式，按自身情况选择其一即可。</p>
+      </div>
+      <div class="entry-grid">
+        <div class="entry">
+          <span class="num">01</span>
+          <div>
+            <h3>首页直达</h3>
+            <p>直接打开秘密官网首页，从顶部导航进入所需栏目，适合已经熟悉结构的常规访问。</p>
+          </div>
+        </div>
+        <div class="entry">
+          <span class="num">02</span>
+          <div>
+            <h3>导航索引</h3>
+            <p>使用页面内的锚点导航，可在入口、栏目结构、使用说明与常见问题之间跳转，减少反复滚动。</p>
+          </div>
+        </div>
+        <div class="entry">
+          <span class="num">03</span>
+          <div>
+            <h3>收藏与书签</h3>
+            <p>将秘密官网首页加入浏览器书签，下次访问时从书签打开，避免依赖搜索结果的排序变化。</p>
+          </div>
+        </div>
+        <div class="entry">
+          <span class="num">04</span>
+          <div>
+            <h3>站内检索</h3>
+            <p>若只想查看某一类内容，可先在栏目结构中定位分类，再进入对应页面，路径更短。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="channels">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>秘密官网的栏目结构</h2>
+        <p>页面按“入口—栏目—说明—答疑”的顺序组织，每个区域承担不同任务，读者可按需取用，不必逐段阅读。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="6" y="10" width="36" height="28" rx="5" fill="none" stroke="#c8963e" stroke-width="2"/>
+            <path d="M6 18h36M16 10v8" stroke="#c8963e" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="34" cy="28" r="3" fill="#1b1f3b"/>
+          </svg>
+          <h3>首页概览</h3>
+          <p>交代秘密官网的定位与阅读顺序，帮助首次到访者在一屏之内判断页面是否对应当前需求。</p>
+        </article>
+        <article class="card">
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M8 12h14v24H8zM26 12h14v24H26z" fill="none" stroke="#c8963e" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M15 20h0M33 20h0M15 26h0M33 26h0" stroke="#1b1f3b" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <h3>内容栏目</h3>
+          <p>对页面内容做分类呈现，每个栏目只讲一件事，避免信息交叉导致的理解成本。</p>
+        </article>
+        <article class="card">
+          <svg class="ico" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="16" fill="none" stroke="#c8963e" stroke-width="2"/>
+            <path d="M18 24l4 4 8-9" fill="none" stroke="#1b1f3b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>操作指引</h3>
+          <p>把访问与使用拆成可执行的步骤，配合注意事项，让读者按图索骥完成操作。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="wrap guide">
+      <div class="sec-head" style="margin-bottom:0;">
+        <h2>使用秘密官网前值得了解的事</h2>
+        <p>访问体验更多取决于路径是否清楚，而不是页面有多少内容。下面几段说明围绕这一点展开。</p>
+      </div>
+      <div class="guide-body">
+        <p>第一次打开秘密官网时，建议先读首屏的两段文字，确认页面主题与你的需求一致，再决定进入哪个栏目。如果只是想确认入口，可直接使用首屏的第一个按钮；如果想了解整体结构，则从导航逐项查看更高效。</p>
+        <p>秘密官网的页面结构以纵向阅读为主，越往下信息越具体。上部负责建立认知，中部给出入口与栏目，下部集中回答疑问。因此在移动端阅读时，优先关注首屏与入口区域，可以在较短时间内完成主要判断。</p>
+        <p>遇到页面无法正常展开的情况，先检查网络连接与浏览器版本，再尝试刷新。若问题持续，可换用其他浏览器重新打开秘密官网首页，通常能排除兼容性因素。页面本身不要求登录即可浏览公开说明部分。</p>
+        <p>为了便于再次访问，建议把秘密官网首页加入书签，而不是依赖搜索结果的排序。搜索结果会随时间和关键词变化，书签则指向固定地址，长期使用更稳妥。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>常见问题</h2>
+        <p>以下问题来自访问者对秘密官网入口与使用的常见疑问，回答保持简洁，便于快速核对。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>秘密官网首页需要注册才能浏览吗？</summary>
+          <p>本页的说明性内容可直接浏览，不要求注册。涉及具体栏目的操作要求，以对应页面上的提示为准，本页不做超出范围的承诺。</p>
+        </details>
+        <details>
+          <summary>如何确认自己打开的是秘密官网？</summary>
+          <p>核对页面标题与顶部品牌文字是否一致，并确认导航中的四个栏目均指向本页内的锚点。两者同时吻合，即可判断当前页面为本页。</p>
+        </details>
+        <details>
+          <summary>手机端阅读有什么需要注意的？</summary>
+          <p>小屏下导航折叠为按钮，点击后展开栏目列表。首屏优先显示标题与说明文字，图形元素置于文字上方，不影响主要信息的获取。</p>
+        </details>
+        <details>
+          <summary>页面里的下载入口现在可以用吗？</summary>
+          <p>下载入口仍处于占位状态，按钮已按规范禁用，暂不提供实际文件。后续替换为真实地址后即可正常使用，本页不对此作提前承诺。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" style="padding-top:0;border-top:0;">
+    <div class="wrap">
+      <div class="panel" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;">
+        <div>
+          <h3 style="margin-bottom:6px;">页面说明文档</h3>
+          <p style="margin:0;font-size:15px;color:var(--muted);">整理秘密官网的入口路径与栏目结构，便于离线查阅。</p>
+        </div>
+        <a class="btn btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none;">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-text">秘密官网</span>
+        <p>秘密官网首页，提供入口方式、栏目结构与使用说明，帮助访问者用更短的路径找到所需内容。</p>
+      </div>
+      <div>
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#entry">访问入口</a></li>
+          <li><a href="#channels">栏目结构</a></li>
+          <li><a href="#guide">使用说明</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>相关说明</h4>
+        <ul>
+          <li><a href="#guide">访问前准备</a></li>
+          <li><a href="#faq">兼容性问题</a></li>
+          <li><a href="#download">说明文档</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 秘密官网 · 本页内容仅用于说明页面结构与访问方式</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.nav-toggle');
+  var nav=document.getElementById('mainnav');
+  if(!btn||!nav)return;
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'&&window.innerWidth<=900){
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body>
+</html>
